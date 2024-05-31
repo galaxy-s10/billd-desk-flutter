@@ -1,13 +1,48 @@
 import 'dart:async';
+import 'dart:math';
+import 'dart:io';
 
 import 'package:billd_desk_flutter/const.dart';
 import 'package:bruno/bruno.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+billdGetRangeRandom(int min, int max) {
+  return (Random().nextDouble() * (max - min + 1)).floor() + min;
+}
+
+billdGetRandomString(int length) {
+  const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var res = '';
+  for (var i = 0; i < length; i += 1) {
+    res += String.fromCharCode(
+        str.codeUnitAt(billdGetRangeRandom(0, str.length - 1)));
+  }
+  return res;
+}
 
 billdPrint(data) {
   // ignore: avoid_print
   print(data);
+}
+
+billdGetLocalIp() async {
+  var url = websocketUrl;
+  try {
+    for (var interface in await NetworkInterface.list()) {
+      for (var address in interface.addresses) {
+        if (address.type == InternetAddressType.IPv4) {
+          if (!kReleaseMode) {
+            url = address.address;
+          }
+        }
+      }
+    }
+  } catch (e) {
+    billdPrint('获取IP地址失败: $e');
+  }
+  return url;
 }
 
 billdNetworkImage(String url) {

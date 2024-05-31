@@ -1,11 +1,10 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:billd_desk_flutter/const.dart';
 import 'package:billd_desk_flutter/stores/app.dart';
+import 'package:billd_desk_flutter/utils/index.dart';
 import 'package:billd_desk_flutter/views/home/home.dart';
-import 'package:billd_desk_flutter/views/live/live.dart';
-import 'package:billd_desk_flutter/views/rank/rank.dart';
-import 'package:billd_desk_flutter/views/area/area.dart';
 import 'package:billd_desk_flutter/views/user/user.dart';
 import 'package:bruno/bruno.dart';
 
@@ -18,6 +17,15 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  // MyApp({super.key}) {}
+
+  // updateBilldGetDevIp() async {
+  //   if (!kReleaseMode) {
+  //     var ip = await billdGetLocalIp();
+  //     axiosBaseUrl = 'http://$ip:4300';
+  //     websocketUrl = 'ws://$ip:4300';
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -70,8 +78,6 @@ class NavBarState extends State<NavBarWidget> {
                 child: BottomNavigationBar(
                     items: [
                       createBarItem('home', '首页'),
-                      createBarItem('area', '分区'),
-                      createBarItem('rank', '排行'),
                       createBarItem('user', '我的'),
                     ],
                     currentIndex: currentTabIndex,
@@ -88,7 +94,10 @@ class NavBarState extends State<NavBarWidget> {
             body: SafeArea(
                 child: IndexedStack(
               index: currentTabIndex,
-              children: const [Home(), Area(), Rank(), User(), Live()],
+              children: const [
+                Home(),
+                User(),
+              ],
             ))),
         onWillPop: () async {
           if (exitTimer == true) {
