@@ -1,5 +1,5 @@
-name: billd_desk_flutter
-description: A new Flutter project.
+name: billd_desk_flutter_pro
+description: 'A new Flutter project.'
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -16,10 +16,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.1+1
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: ^3.7.2
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -33,13 +33,13 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8
 
   dio: ^5.4.3
 
   permission_handler: ^11.0.1
 
-  flutter_webrtc: ^0.9.46
+  flutter_webrtc: ^0.13.0
 
   bruno: ^3.4.2
 
@@ -51,11 +51,15 @@ dependencies:
 
   flutter_background: ^1.2.0
 
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.3
 
-  socket_io_client: ^2.0.3
+  socket_io_client: ^3.1.1
 
   audioplayers: ^5.2.1
+
+  package_info_plus: ^8.0.2
+
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -66,17 +70,16 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
-
 flutter_launcher_icons:
-  android: 'launcher_icon'
-  image_path: 'assets/billd.jpeg'
+  android: 'ic_launcher'
+  image_path: 'assets/ic_launcher.jpg'
 
+# The following section is specific to Flutter packages.
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -85,22 +88,22 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/tabbar/home.png
-    - assets/images/tabbar/home_active.png
-    - assets/images/tabbar/area.png
-    - assets/images/tabbar/area_active.png
-    - assets/images/tabbar/rank.png
-    - assets/images/tabbar/rank_active.png
-    - assets/images/tabbar/user.png
-    - assets/images/tabbar/user_active.png
-    - assets/images/home/reload.png
-    - assets/images/home/sync.png
+    - assets/images/tabbar/connect.png
+    - assets/images/tabbar/connect_active.png
+    - assets/images/tabbar/setting.png
+    - assets/images/tabbar/setting_active.png
+    - assets/images/lazy_error.png
+    - assets/images/view_off.png
+    - assets/images/view_on.png
+    - assets/images/copy.png
+    - assets/images/refresh.png
+    - assets/images/edit.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+  # https://flutter.dev/to/resolution-aware-images
 
   # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # https://flutter.dev/to/asset-from-package
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -120,4 +123,4 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  # see https://flutter.dev/to/font-from-package

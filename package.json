@@ -1,0 +1,22 @@
+{
+  "name": "billd-desk-flutter-pro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "基于Flutter3 + WebRTC搭建的远程桌面App",
+  "bugs": {
+    "url": "https://github.com/billd-project/billd-desk-flutter-pro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billd-project/billd-desk-flutter-pro"
+  },
+  "license": "MIT",
+  "author": "shuisheng <2274751790@qq.com>",
+  "scripts": {
+    "sync-public": "ts-node ./deploy/handleSyncPublic.mjs"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "trash": "^8.1.1"
+  }
+}

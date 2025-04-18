@@ -1,4 +1,4 @@
-import 'package:billd_desk_flutter/const.dart';
+import 'package:billd_desk_flutter_pro/const.dart';
 import 'package:flutter/material.dart';
 
 class BilldLoading {
