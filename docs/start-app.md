@@ -10,6 +10,8 @@ flutter pub get
 
 ## 打包
 
+> https://docs.flutter.cn/deployment/android/#build-an-apk
+
 ### 安卓
 
 ```bash

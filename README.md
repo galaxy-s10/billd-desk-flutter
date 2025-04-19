@@ -24,6 +24,8 @@
 ![version](https://img.shields.io/github/package-json/v/galaxy-s10/billd-desk)
 ![License](https://img.shields.io/github/license/galaxy-s10/billd-desk)
 ![language](https://img.shields.io/github/languages/top/galaxy-s10/billd-desk)
+![language](https://img.shields.io/github/languages/top/galaxy-s10/billd-desk-server)
+![language](https://img.shields.io/github/languages/top/galaxy-s10/billd-desk-flutter)
 
 </div>
 
@@ -33,17 +35,19 @@ BilldDesk 远程桌面控制，目前实现了类似 ToDesk、向日葵等远程
 
 ## 对比ToDesk免费个人版
 
-> 作者使用过很多远程软件：TeamViewer、向日葵、ToTesk、AnyDesk、RustDesk、UU远程、连连控，还有qq自带的远程协助等等，但用ToDesk免费个人版比较多，因此用它和BilldDesk作对比~
+> 作者使用过很多远程软件：TeamViewer、向日葵、ToTesk、AnyDesk、RustDesk、UU远程、连连控，还有qq自带的远程协助等等，但用ToDesk免费个人版比较多，因此用ToTesk和BilldDesk作对比~
 
 |                           | BilldDesk      | ToDesk免费个人版                                     |
 | ------------------------- | -------------- | ---------------------------------------------------- |
 | 连接限制                  | 无限制，免费   | 300次连接和120小时限制，超出需要购买专业版（¥24/月） |
-| 画质限制                  | 无限制，免费   | 最高1080p                                            |
-| 安卓被控                  | 支持，免费     | 不支持，需要购买插件（¥25/月）                       |
-| 多屏操作                  | 支持，免费     | 不支持，需要购买性能版（¥95/月）                     |
+| 画质限制                  | 无限制，免费   | 最高1080p，30帧                                      |
+| 安卓被控                  | 支持，免费     | 不支持，需要购买专业版（¥24/月）或购买插件（¥15/月） |
+| 同时显示多屏              | 支持，免费     | 不支持，需要购买性能版（¥95/月）                     |
 | 屏幕墙                    | 支持，免费     | 不支持，需要购买ToDesk企业版（¥805/年）              |
+| 远程时录屏                | 支持，免费     | 不支持                                               |
 | web网页发起远程控制       | 支持，免费     | 不支持，需要购买ToDesk企业版（¥805/年）              |
 | 远程控制web网页（仅观看） | 支持，免费     | 不支持                                               |
+| 同账号多主控同时发起远控  | 支持，免费     | 支持，需要购买插件（¥233/月）                        |
 | 私有化部署/二次开发       | 支持，开源免费 | 不支持，需要ToDesk企业版，定价未知                   |
 
 ## 生态
