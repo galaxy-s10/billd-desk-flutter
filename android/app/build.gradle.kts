@@ -63,3 +63,7 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    implementation("com.infobip:google-webrtc:1.0.0035529")
+}
