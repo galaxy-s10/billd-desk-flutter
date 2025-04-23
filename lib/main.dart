@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:billd_desk_flutter_pro/api/global_msg.dart';
 import 'package:billd_desk_flutter_pro/const.dart';
 import 'package:billd_desk_flutter_pro/stores/app.dart';
 import 'package:billd_desk_flutter_pro/utils/index.dart';
@@ -60,6 +61,29 @@ class NavBarState extends State<NavBarWidget> {
   var exitDelay = 1;
 
   @override
+  initState() {
+    super.initState();
+    init();
+  }
+
+  init() async {
+    try {
+      var res = await GlobalMsgGlobalApi.fetchGlobalMsgGlobal(
+        orderName: 'priority',
+        orderBy: 'desc',
+        show: 0,
+      );
+      if (res['code'] == 200) {
+        setState(() {
+          store.globalMsg.value = res['data'];
+        });
+      }
+    } catch (e) {
+      billdPrint(e);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     EdgeInsets padding = MediaQuery.paddingOf(context);
     final size = MediaQuery.of(context).size;
@@ -68,6 +92,7 @@ class NavBarState extends State<NavBarWidget> {
     store.setNormalHeight(normalHeight);
     store.setSafeHeight(padding.top);
     store.setTabIndex(currentTabIndex);
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) async {
