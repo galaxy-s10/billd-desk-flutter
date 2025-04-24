@@ -5,6 +5,7 @@ import 'package:billd_desk_flutter_pro/const.dart';
 import 'package:billd_desk_flutter_pro/stores/app.dart';
 import 'package:billd_desk_flutter_pro/utils/index.dart';
 import 'package:billd_desk_flutter_pro/views/connect/connect.dart';
+import 'package:billd_desk_flutter_pro/views/msg/msg.dart';
 import 'package:billd_desk_flutter_pro/views/setting/setting.dart';
 import 'package:bruno/bruno.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -76,6 +77,18 @@ class NavBarState extends State<NavBarWidget> {
       if (res['code'] == 200) {
         setState(() {
           store.globalMsg.value = res['data'];
+        });
+        Future.delayed(Duration(seconds: 1), () {
+          if (mounted) {
+            if (store.globalMsg.value.length > 0) {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return MsgModal();
+                },
+              );
+            }
+          }
         });
       }
     } catch (e) {
