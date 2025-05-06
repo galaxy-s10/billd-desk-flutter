@@ -75,7 +75,7 @@ BilldDesk 远程桌面控制，目前实现了类似 ToDesk、向日葵等远程
 - [x] 多屏操作
 - [x] 连接鉴权
 - [ ] 自定义设备码
-- [ ] 自定义中继服务器
+- [x] 自定义接口（wws/api/中继服务器）
 - [x] 按键组合键
 - [x] 文件传输
 - [x] 开机自启
@@ -109,6 +109,16 @@ BilldDesk 远程桌面控制，目前实现了类似 ToDesk、向日葵等远程
 > 仅观看模式
 
 ![img](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/333.png?raw=true)
+
+### web网页移动端
+
+> 首页
+
+![img](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/777.png?raw=true)
+
+> 控制页
+
+![img](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/888.png?raw=true)
 
 ### 屏幕墙
 
