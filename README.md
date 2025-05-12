@@ -186,20 +186,30 @@ billd-desk完全开源（可商用），欢迎部署！
 
 ## 客户端下载
 
-> https://desk.hsslive.cn/s/bd
+> https://desk.hsslive.cn/s/bd2
 >
-> 备用链接：https://pan.quark.cn/s/2acbf2d49603
+> 备用链接：https://pan.baidu.com/s/1MRTeS47wsV70BQe4bxDqSQ?pwd=qx8j
 
 ## 官方交流群
 
-![img](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/wechat_group.jpg?raw=true)
+- 1群（已满200人）
+  ![wechat_group1](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/wechat_group1.jpg?raw=true)
+
+- 2群（已满200人）
+  ![wechat_group2](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/wechat_group2.jpg?raw=true)
+
+- 3群（未满200人）
+  ![wechat_group3](https://github.com/galaxy-s10/billd-desk/blob/main/src/assets/readme_img/wechat_group3.jpg?raw=true)
 
 ## 多平台支持
 
-- [x] Windows
+- [x] Web网页（建议使用：[Chrome浏览器](https://www.google.com/intl/zh-CN/chrome/) / [Via浏览器](https://viayoo.com) / `Safari浏览器`）
+- [ ] Windows 7（[再见，Windows 7/8/8.1](https://www.electronjs.org/zh/blog/windows-7-to-8-1-deprecation-notice)）
+- [x] Windows 10
 - [x] macOS
 - [x] Linux
 - [x] Android 12+，低于该版本的未实际测试
+- [ ] iOS
 
 ## 贡献者
 
