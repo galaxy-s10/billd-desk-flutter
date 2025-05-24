@@ -53,7 +53,7 @@ android {
             if (this is com.android.build.gradle.internal.api.ApkVariantOutputImpl) {
                 val config = project.android.defaultConfig
                 val version = config.versionName
-                val newName = "BilldDesk_v$version.apk" // 使用版本名设置文件名
+                val newName = "BilldDesk_v$version.APK" // 使用版本名设置文件名
                 this.outputFileName = newName
             }
         }

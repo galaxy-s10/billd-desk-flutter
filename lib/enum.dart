@@ -24,6 +24,7 @@ const wsMsgTypeEnum = {
   'leaveRemoteResult': 'leaveRemoteResult',
   'breakRemote': 'breakRemote',
   'billdDeskBehavior': 'billdDeskBehavior',
+  'message': 'message',
 };
 
 const billdDeskBehaviorEnum = {
@@ -59,44 +60,6 @@ const billdDeskBehaviorEnum = {
   'phoneClipboard': 'phoneClipboard',
 };
 
-// 直播间类型
-const liveRoomTypeEnum = {
-  /** 系统推流 */
-  'system': 1,
-  /** 主播使用srs推流 */
-  "srs": 2,
-  /** 主播使用obs/ffmpeg推流 */
-  'obs': 3,
-  /** 主播使用webrtc推流，直播 */
-  'wertc_live': 4,
-  /** 主播使用webrtc推流，会议，实现一 */
-  'wertc_meeting_one': 5,
-  /** 主播使用webrtc推流，会议，实现二 */
-  'wertc_meeting_two': 6,
-  /** 主播使用msr推流 */
-  'msr': 7,
-  /** 主播打pk */
-  'pk': 8,
-  /** 主播使用腾讯云css推流 */
-  'tencentcloud_css': 9,
-  /** 主播使用腾讯云css推流打pk */
-  'tencentcloud_css_pk': 10,
-  /** 转推b站 */
-  'forward_bilibili': 11,
-  /** 转推虎牙 */
-  'forward_huya': 12,
-  /** 转推斗鱼 */
-  'forward_douyu': 13,
-  /** 转推斗鱼 */
-  'forward_douyin': 14,
-  /** 转推斗鱼 */
-  'forward_kuaishou': 15,
-  /** 转推斗鱼 */
-  'forward_xiaohongshu': 16,
-  /** 转推所有 */
-  'forward_all': 17,
-};
-
 const clientEnvEnum = {
   'android': 'android',
   'ios': 'ios',
@@ -106,6 +69,7 @@ const clientEnvEnum = {
   'web_pc': 'web_pc',
   'windows': 'windows',
   'macos': 'macos',
+  'linux': 'linux',
 };
 
 const clientAppEnum = {
@@ -113,4 +77,10 @@ const clientAppEnum = {
   'billd_live_admin': 'billd_live_admin',
   'billd_desk': 'billd_desk',
   'billd_desk_admin': 'billd_desk_admin',
+};
+
+const lsCacheEnum = {
+  'deskUserUuid': 'deskUserUuid',
+  'deskUserPassword': 'deskUserPassword',
+  'todaylock': 'todaylock',
 };

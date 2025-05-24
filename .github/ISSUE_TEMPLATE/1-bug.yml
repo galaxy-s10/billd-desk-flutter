@@ -1,0 +1,80 @@
+name: "\U0001F41E BilldDesk问题反馈"
+description: 欢迎提出你遇到的问题！
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **强烈建议主控和被控使用同一个版本！**
+        **如果你使用浏览器作为主控/被控，强烈建议使用：[Chrome浏览器](https://www.google.com/intl/zh-CN/chrome/) / [Via浏览器](https://viayoo.com) / `Safari浏览器`**
+  - type: input
+    id: app1
+    attributes:
+      label: BilldDesk主控端
+      description: |
+        web电脑网页端、web手机网页端、安卓端、win客户端、mac客户端...
+      placeholder: web电脑网页端
+    validations:
+      required: true
+  - type: input
+    id: version1
+    attributes:
+      label: BilldDesk主控端版本
+      placeholder: 0.24.0
+    validations:
+      required: true
+  - type: input
+    id: env1
+    attributes:
+      label: 主控端环境
+      description: |
+        如果你使用浏览器：电脑火狐浏览器、电脑edge浏览器、手机via浏览器、手机Safari浏览器...
+
+        如果你使用pc客户端：win7、win10、win11、macos...
+
+        如果你使用安卓端：安卓11、安卓12、安卓13、安卓14、安卓15...
+      placeholder: 手机via浏览器
+    validations:
+      required: true
+  - type: input
+    id: app2
+    attributes:
+      label: BilldDesk被控端
+      description: |
+        web电脑网页端、web手机网页端、安卓端、win客户端、mac客户端...
+      placeholder: win客户端
+    validations:
+      required: true
+  - type: input
+    id: version2
+    attributes:
+      label: BilldDesk被控端版本
+      placeholder: 0.25.0
+    validations:
+      required: true
+  - type: input
+    id: env2
+    attributes:
+      label: 被控端环境
+      description: |
+        如果你使用浏览器：电脑火狐浏览器、电脑edge浏览器、手机via浏览器、手机Safari浏览器...
+
+        如果你使用pc客户端：win7、win10、win11、macos...
+
+        如果你使用安卓端：安卓11、安卓12、安卓13、安卓14、安卓15...
+      placeholder: 安卓12
+    validations:
+      required: true
+  - type: textarea
+    id: problem1
+    attributes:
+      label: 你遇到的问题是什么？
+      placeholder: 详细描述你遇到的问题
+    validations:
+      required: true
+  - type: textarea
+    id: problem2
+    attributes:
+      label: 你期望的结果是什么？
+      placeholder: 详细描述你期望的结果
+    validations:
+      required: true

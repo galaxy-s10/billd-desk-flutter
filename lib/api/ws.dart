@@ -18,4 +18,9 @@ class WsApi {
     );
     return res;
   }
+
+  static fetchWsSendMsg(data) async {
+    var res = await HttpRequest.post('/ws/send_msg', data: data);
+    return res;
+  }
 }

@@ -12,10 +12,10 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' as get_x;
 
 void main() async {
-  final Controller store = Get.put(Controller());
+  final Controller store = get_x.Get.put(Controller());
   WidgetsFlutterBinding.ensureInitialized();
   PackageInfo packageInfo = await PackageInfo.fromPlatform();
   store.appInfo.value = packageInfo;
@@ -28,11 +28,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     billdRequestPermissions();
-    final size = MediaQuery.of(context).size;
-    final Controller store = Get.put(Controller());
-    store.setScreenWidth(size.width);
 
-    return GetMaterialApp(
+    return get_x.GetMaterialApp(
       debugShowCheckedModeBanner: false, //右上角的debug信息
       title: appTitle,
       theme: ThemeData(
@@ -56,7 +53,7 @@ class NavBarWidget extends StatefulWidget {
 }
 
 class NavBarState extends State<NavBarWidget> {
-  final Controller store = Get.put(Controller());
+  final Controller store = get_x.Get.put(Controller());
   var currentTabIndex = 0;
   var exitTimer = false;
   var exitDelay = 1;
@@ -78,18 +75,16 @@ class NavBarState extends State<NavBarWidget> {
         setState(() {
           store.globalMsg.value = res['data'];
         });
-        Future.delayed(Duration(seconds: 1), () {
-          if (mounted) {
-            if (store.globalMsg.value.length > 0) {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return MsgModal();
-                },
-              );
-            }
-          }
-        });
+        // if (mounted) {
+        if (store.globalMsg.value.length > 0) {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return MsgModal();
+            },
+          );
+        }
+        // }
       }
     } catch (e) {
       billdPrint(e);
@@ -166,16 +161,16 @@ class NavBarState extends State<NavBarWidget> {
               ),
             ),
           ),
-          axiosBaseUrl.contains('hsslive') == false
+          apiUrl.contains('hsslive') == false
               ? const Positioned(
-                bottom: 55,
+                bottom: 62,
                 right: 10,
                 child: IgnorePointer(
                   child: Text(
                     'beta',
                     style: TextStyle(
                       color: themeColor,
-                      fontSize: 14,
+                      fontSize: 16,
                       decoration: TextDecoration.none,
                     ),
                   ),

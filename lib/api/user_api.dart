@@ -21,11 +21,6 @@ class UserApi {
     return res;
   }
 
-  static getUserInfo() async {
-    var res = await HttpRequest.get('/user/get_user_info', params: {});
-    return res;
-  }
-
   static fetchDeskUserCreate() async {
     var res = await HttpRequest.post('/desk_user/create');
     return res;
@@ -34,6 +29,14 @@ class UserApi {
   static fetchDeskUserLogin({uuid, password}) async {
     var res = await HttpRequest.post(
       '/desk_user/login',
+      data: {'uuid': uuid, 'password': password},
+    );
+    return res;
+  }
+
+  static fetchDeskUserAutoLogin({uuid, password}) async {
+    var res = await HttpRequest.post(
+      '/desk_user/auto_login',
       data: {'uuid': uuid, 'password': password},
     );
     return res;

@@ -1,0 +1,14 @@
+name: "\U0001F680 BilldDesk功能建议"
+description: 欢迎提出你的想法！
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **BilldDesk自2024年2月底开始开发，经过不断迭代升级，逐步趋向完善！**
+  - type: textarea
+    id: feat
+    attributes:
+      label: 请说出你的想法
+      placeholder: 详细描述你的想法
+    validations:
+      required: true

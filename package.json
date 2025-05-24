@@ -13,10 +13,10 @@
   "license": "MIT",
   "author": "shuisheng <2274751790@qq.com>",
   "scripts": {
-    "sync-public": "ts-node ./deploy/handleSyncPublic.mjs"
+    "sync-github": "ts-node ./deploy/handleSyncGithub.mjs"
   },
   "devDependencies": {
-    "ts-node": "^10.4.0",
-    "trash": "^8.1.1"
+    "trash": "^8.1.1",
+    "ts-node": "^10.4.0"
   }
 }
